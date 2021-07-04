@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: grey !important;
+    
+}
+.customer-cards {
+    left: 15%;
+}
+.cust-list:hover, .cust-list:active  {
+    background-color: gray;
+
+}
+
+.nav-item:hover, .nav-item:active  {
+    background-color: grey;
+}

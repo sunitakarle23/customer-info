@@ -1,0 +1,7 @@
+<table class="table table-dark" *ngIf="customerList.length > 0">
+    <tr *ngFor="let cust of customerList" class="cust-list">
+        <td [routerLink]="['/customer-details', cust.id]" routerLinkActive="active" > 
+          {{cust.name}}
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,43 @@
+<div class='container-fluid' *ngIf="customers.length >0">  
+    <div class='col-12' *ngIf="custId; else custDetails">  
+        <ngb-carousel>  
+            <ng-template ngbSlide *ngFor="let cust of customerDetails; let i= index">  
+                <div class="card customer-cards">
+                    <div class="card-header">
+                    #{{cust.id}}
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                        <p>{{cust.name}}</p>
+                        <p>{{cust.email}}</p>
+                        
+                        <footer class="blockquote-footer">
+                            {{cust.address.street + cust.address.suite + cust.address.city + cust.address.zipcode}}
+                        </footer>
+                        </blockquote>
+                    </div>
+                    
+                </div>
+            </ng-template>  
+        </ngb-carousel>  
+    </div>  
+    <ng-template #custDetails>
+        <div class="card" *ngFor="let cust of customerDetails; let i= index">
+            <div class="card-header">
+            #{{cust.id}}
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                <p>{{cust.name}}</p>
+                <p>{{cust.email}}</p>
+                
+                <footer class="blockquote-footer">
+                    {{cust.address.street + cust.address.suite + cust.address.city + cust.address.zipcode}}
+                </footer>
+                </blockquote>
+            </div>
+            
+        </div>
+    </ng-template>
+  
+</div>  

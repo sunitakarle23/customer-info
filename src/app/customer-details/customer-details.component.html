@@ -1,4 +1,4 @@
-<div class='container-fluid' *ngIf="customers.length >0">  
+<div class='container-fluid' *ngIf="customerDetails.length >0">  
     <div class='col-12' *ngIf="custId; else custDetails">  
         <ngb-carousel>  
             <ng-template ngbSlide *ngFor="let cust of customerDetails; let i= index">  
